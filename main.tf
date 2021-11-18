@@ -31,14 +31,5 @@ resource "aws_subnet" "Subnet-1" {
       Name = var.instancename[count.index]
   }
   }
-  resource "aws_internet_gateway" "Terraform_IGW" {
-  vpc_id = aws_vpc.Terraform-Main.id
-  tags = {
-    Name = "Terraform IGW"
-  }
-}
-  route = [
-    {
-      cidr_block = "10.0.1.0/24"
-      gateway_id = aws_internet_gateway.example.id
-    }
+  
+ 
