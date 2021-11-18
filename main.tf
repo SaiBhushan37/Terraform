@@ -37,12 +37,6 @@ resource "aws_subnet" "Subnet-1" {
     Name = "Terraform IGW"
   }
 }
-resource "aws_default_route_table" "Terraform_Route_Table" {
-  default_route_table_id = aws_vpc.Terraform_Route_Table_id
-}
-resource "aws_route_table" "example" {
-  vpc_id = aws_vpc.example.id
-}
   route = [
     {
       cidr_block = "10.0.1.0/24"
